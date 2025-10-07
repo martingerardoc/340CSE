@@ -4,3 +4,288 @@
 *:after {
   box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 28px;
+  /* Background behind wrapper */
+  background-image: url(../images/site/small_check.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+/* Wrapper with border + inner gap */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  border: 4px solid blue;   /* 🔵 blue border */
+  margin: 20px;             /* space outside border */
+  padding: 20px;            /* gap inside border */
+  background-color: rgba(255, 255, 255, 0.9); /* light background inside */
+}
+/* Wrapper keeps structure and sits on top of body background */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9); /* light overlay so text is readable */
+}
+
+/* Header layout */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #222;
+  color: white;
+  border-bottom: 2px solid blue; /* optional */
+}
+
+/* Left section: icon + text */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 40px;   /* adjust size */
+  height: auto;
+}
+
+.site-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Right section */
+.header-right h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: normal;
+  color: #4CAF50; /* matches your active nav color */
+}
+
+/* Headings & text */
+h2, p {
+  margin: 10px;
+}
+
+/* Sticky navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #333333;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* space between hamburger and links */
+  padding: 0 15px;
+}
+
+/* Hamburger button (HIDDEN by default on large screens) */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Nav links */
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  gap: 20px;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: #111111;
+}
+
+.navbar li a.active {
+  background-color: #4CAF50;
+}
+
+/* Main content layout */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* General box styling */
+.box {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 8px;
+}
+
+/* Top big box */
+.box-large {
+  display: flex;
+}
+/* Hero section (top box) */
+.hero-box {
+  position: relative;
+  background-image: url("../images/vehicles/delorean.jpg"); /* 🔹 Replace with your image path */
+  background-repeat: no-repeat;
+  background-position: right center; /* shifted to the right */
+  background-size: contain; /* image doesn’t stretch */
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+/* Welcome text */
+.welcome-text {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* Overlay content box */
+.hero-content {
+  background-color: rgba(255, 255, 255, 0.85); /* semi-transparent */
+  padding: 20px;
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+/* Headings inside hero */
+.hero-content h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.hero-content h4 {
+  margin: 5px 0;
+  font-weight: normal;
+}
+
+/* Call-to-action button */
+.cta-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #007bff; /* blue-light */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0056b3; /* darker blue on hover */
+}
+
+/* Bottom row container */
+.box-row {
+  display: flex;
+  gap: 20px;
+}
+
+/* Small boxes share space */
+.box-small {
+  flex: 1;
+}
+
+/* Headings inside boxes */
+.box h3 {
+  margin: 0 0 10px 0;
+}
+
+
+/* Upgrade grid inside Delorean Upgrades box */
+.delorean-upgrades .upgrade-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns on desktop */
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Each upgrade item with blue-light background */
+.upgrade-item {
+  background-color: #e0f0ff; /* light blue */
+  border: 1px solid #007bff; /* optional blue border */
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.3s ease; /* subtle hover effect */
+}
+
+/* Upgrade images slightly smaller */
+.upgrade-item img {
+  width: 80%;     /* smaller than full width */
+  max-width: 120px; /* optional limit */
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+/* Hover effect (optional, for nicer UI) */
+.upgrade-item:hover {
+  transform: translateY(-5px); /* lifts slightly on hover */
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Link text */
+.upgrade-item a {
+  display: block;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.upgrade-item a:hover {
+  color: #0056b3;
+}
+
+/* Review list styling */
+.delorean-reviews .review-list {
+  list-style-type: disc; /* bullet points */
+  padding-left: 20px;    /* indent bullets */
+  margin-top: 10px;
+}
+
+.delorean-reviews .review-list li {
+  margin-bottom: 10px;
+}
+
+.delorean-reviews h2 {
+  margin: 30;             /* remove default margin from h4 */
+  font-weight: normal;   /* optional, lighter than default */
+  font-size: 30px;       /* adjust size */
+}
+
+
+
+/* Footer styling */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #333;
+  color: white;
+  margin-top: auto; /* pushes footer to bottom */
+}

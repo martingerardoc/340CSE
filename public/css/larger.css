@@ -1,0 +1,105 @@
+/* Responsive: for screens smaller than 768px */
+@media (max-width: 768px) {
+  /* Keep checkerboard background */
+  body {
+    background-image: url(../images/site/checkerboard.jpg);
+  }
+
+  /* Navbar setup */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  /* Hide nav links by default */
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+    display: none; /* Hidden initially */
+    background-color: #333;
+    position: absolute;
+    top: 60px; /* Just below the navbar */
+    left: 0;
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  /* Show menu when .show class is toggled */
+  .navbar ul.show {
+    display: flex;
+  }
+
+  /* Hamburger button visible */
+  .hamburger {
+    display: block;
+    font-size: 1.8rem;
+    color: red;
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 20;
+  }
+
+  /* Adjust menu links appearance */
+  .navbar ul li {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
+
+  .navbar ul li a:hover {
+    background-color: #444;
+  }
+
+  /* Stack boxes vertically */
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero-box {
+    order: 0;
+    background-image: url("../images/vehicles/delorean-tn.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .delorean-reviews {
+    order: 1;
+  }
+
+  .delorean-upgrades {
+    order: 2;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .delorean-upgrades .upgrade-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .upgrade-item img {
+    width: 60%;
+    max-width: 100px;
+  }
+
+  .box-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
