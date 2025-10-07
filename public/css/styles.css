@@ -289,3 +289,37 @@ h2, p {
   color: white;
   margin-top: auto; /* pushes footer to bottom */
 }
+
+#inv-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+#inv-display li {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#inv-display img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+.namePrice {
+  text-align: center;
+}
+
+.namePrice h2 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.namePrice span {
+  color: #007bff;
+  font-weight: bold;
+}
